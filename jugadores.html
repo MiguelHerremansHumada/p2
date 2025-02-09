@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mejores Jugadores de la Liga Endesa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Mejores Jugadores de la Liga Endesa</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="jugadores.html">Jugadores</a></li>
+                <li><a href="equipos.html">Equipos</a></li>
+                <li><a href="clasificacion.html">Clasificación</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Las leyendas y estrellas de la Liga Endesa</h2>
+            <p>Estos son algunos de los jugadores más destacados en la historia de la Liga Endesa.</p>
+        </section>
+
+        <section class="players">
+            <h2>Jugadores Destacados</h2>
+            <div class="players-grid">
+
+                <div class="player-card" onclick="flipCard(this)">
+                    <div class="player-inner">
+                        <div class="player-front">
+                            <img src="navarro.jpg" alt="Juan Carlos Navarro">
+                            <h3>Juan Carlos Navarro</h3>
+                        </div>
+                        <div class="player-back">
+                            <p><strong>Posición:</strong> Escolta</p>
+                            <p><strong>Puntos en ACB:</strong> 8,318</p>
+                            <p><strong>Club:</strong> FC Barcelona</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card" onclick="flipCard(this)">
+                    <div class="player-inner">
+                        <div class="player-front">
+                            <img src="fernandez.jpg" alt="Rudy Fernández">
+                            <h3>Rudy Fernández</h3>
+                        </div>
+                        <div class="player-back">
+                            <p><strong>Posición:</strong> Escolta</p>
+                            <p><strong>Títulos ACB:</strong> 6</p>
+                            <p><strong>Club:</strong> Real Madrid</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card" onclick="flipCard(this)">
+                    <div class="player-inner">
+                        <div class="player-front">
+                            <img src="llull.jpg" alt="Sergio Llull">
+                            <h3>Sergio Llull</h3>
+                        </div>
+                        <div class="player-back">
+                            <p><strong>Posición:</strong> Base</p>
+                            <p><strong>Puntos en ACB:</strong> 6,500+</p>
+                            <p><strong>Club:</strong> Real Madrid</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="player-card" onclick="flipCard(this)">
+                    <div class="player-inner">
+                        <div class="player-front">
+                            <img src="marc_gasol.jpg" alt="Marc Gasol">
+                            <h3>Marc Gasol</h3>
+                        </div>
+                        <div class="player-back">
+                            <p><strong>Posición:</strong> Pívot</p>
+                            <p><strong>Títulos ACB:</strong> 1</p>
+                            <p><strong>Club:</strong> Bàsquet Girona</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Comparador de jugadores -->
+        <section>
+            <h2>Comparador de Jugadores</h2>
+            <canvas id="statsChart"></canvas>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Liga Endesa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function flipCard(card) {
+            card.classList.toggle("flipped");
+        }
+
+        const ctx = document.getElementById('statsChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Juan Carlos Navarro', 'Rudy Fernández', 'Sergio Llull', 'Marc Gasol'],
+                datasets: [{
+                    label: 'Puntos en ACB',
+                    data: [8318, 6500, 6000, 5500],
+                    backgroundColor: ['#E95C20', '#FFD700', '#00AEEF', '#FF5733']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos de la Liga Endesa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Equipos de la Liga Endesa</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="jugadores.html">Jugadores</a></li>
+                <li><a href="equipos.html">Equipos</a></li>
+                <li><a href="clasificacion.html">Clasificación</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Equipos de la Temporada 2024-2025</h2>
+            <div class="teams-grid">
+
+                <!-- Lista completa de los 18 equipos -->
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="team-inner">
+                        <div class="team-front">
+                            <img src="logos/real-madrid.png" alt="Real Madrid">
+                            <h3>Real Madrid</h3>
+                        </div>
+                        <div class="team-back">
+                            <p><strong>Ligas:</strong> 36</p>
+                            <p><strong>Temporadas:</strong> 68</p>
+                            <p><strong>Mejor Clasificación:</strong> 1º</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="team-inner">
+                        <div class="team-front">
+                            <img src="logos/barca.png" alt="Barça">
+                            <h3>Barça</h3>
+                        </div>
+                        <div class="team-back">
+                            <p><strong>Ligas:</strong> 20</p>
+                            <p><strong>Temporadas:</strong> 68</p>
+                            <p><strong>Mejor Clasificación:</strong> 1º</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="team-inner">
+                        <div class="team-front">
+                            <img src="logos/unicaja.png" alt="Unicaja">
+                            <h3>Unicaja</h3>
+                        </div>
+                        <div class="team-back">
+                            <p><strong>Ligas:</strong> 1</p>
+                            <p><strong>Temporadas:</strong> 42</p>
+                            <p><strong>Mejor Clasificación:</strong> 1º</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="team-inner">
+                        <div class="team-front">
+                            <img src="logos/baskonia.png" alt="Baskonia">
+                            <h3>Baskonia</h3>
+                        </div>
+                        <div class="team-back">
+                            <p><strong>Ligas:</strong> 4</p>
+                            <p><strong>Temporadas:</strong> 50</p>
+                            <p><strong>Mejor Clasificación:</strong> 1º</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="team-inner">
+                        <div class="team-front">
+                            <img src="logos/valencia.png" alt="Valencia Basket">
+                            <h3>Valencia Basket</h3>
+                        </div>
+                        <div class="team-back">
+                            <p><strong>Ligas:</strong> 1</p>
+                            <p><strong>Temporadas:</strong> 36</p>
+                            <p><strong>Mejor Clasificación:</strong> 1º</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="team-inner">
+                        <div class="team-front">
+                            <img src="logos/gran-canaria.png" alt="Gran Canaria">
+                            <h3>Gran Canaria</h3>
+                        </div>
+                        <div class="team-back">
+                            <p><strong>Ligas:</strong> 0</p>
+                            <p><strong>Temporadas:</strong> 32</p>
+                            <p><strong>Mejor Clasificación:</strong> 3º</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="team-inner">
+                        <div class="team-front">
+                            <img src="logos/tenerife.png" alt="Lenovo Tenerife">
+                            <h3>Lenovo Tenerife</h3>
+                        </div>
+                        <div class="team-back">
+                            <p><strong>Ligas:</strong> 0</p>
+                            <p><strong>Temporadas:</strong> 20</p>
+                            <p><strong>Mejor Clasificación:</strong> 2º</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="team-inner">
+                        <div class="team-front">
+                            <img src="logos/murcia.png" alt="UCAM Murcia">
+                            <h3>UCAM Murcia</h3>
+                        </div>
+                        <div class="team-back">
+                            <p><strong>Ligas:</strong> 0</p>
+                            <p><strong>Temporadas:</strong> 25</p>
+                            <p><strong>Mejor Clasificación:</strong> 4º</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="team-card" onclick="flipCard(this)">
+                    <div class="team-inner">
+                        <div class="team-front">
+                            <img src="logos/manresa.png" alt="BAXI Manresa">
+                            <h3>BAXI Manresa</h3>
+                        </div>
+                        <div class="team-back">
+                            <p><strong>Ligas:</strong> 1</p>
+                            <p><strong>Temporadas:</strong> 40</p>
+                            <p><strong>Mejor Clasificación:</strong> 1º</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bàsquet Girona -->
+<div class="team-card" onclick="flipCard(this)">
+    <div class="team-inner">
+        <div class="team-front">
+            <img src="logos/girona.png" alt="Bàsquet Girona">
+            <h3>Bàsquet Girona</h3>
+        </div>
+        <div class="team-back">
+            <p><strong>Ligas:</strong> 0</p>
+            <p><strong>Temporadas:</strong> 3</p>
+            <p><strong>Mejor Clasificación:</strong> 9º</p>
+        </div>
+    </div>
+</div>
+
+<!-- Casademont Zaragoza -->
+<div class="team-card" onclick="flipCard(this)">
+    <div class="team-inner">
+        <div class="team-front">
+            <img src="logos/zaragoza.png" alt="Casademont Zaragoza">
+            <h3>Casademont Zaragoza</h3>
+        </div>
+        <div class="team-back">
+            <p><strong>Ligas:</strong> 0</p>
+            <p><strong>Temporadas:</strong> 16</p>
+            <p><strong>Mejor Clasificación:</strong> 3º</p>
+        </div>
+    </div>
+</div>
+
+<!-- Río Breogán -->
+<div class="team-card" onclick="flipCard(this)">
+    <div class="team-inner">
+        <div class="team-front">
+            <img src="logos/breogan.png" alt="Río Breogán">
+            <h3>Río Breogán</h3>
+        </div>
+        <div class="team-back">
+            <p><strong>Ligas:</strong> 0</p>
+            <p><strong>Temporadas:</strong> 25</p>
+            <p><strong>Mejor Clasificación:</strong> 5º</p>
+        </div>
+    </div>
+</div>
+
+<!-- Surne Bilbao Basket -->
+<div class="team-card" onclick="flipCard(this)">
+    <div class="team-inner">
+        <div class="team-front">
+            <img src="logos/bilbao.png" alt="Surne Bilbao Basket">
+            <h3>Surne Bilbao Basket</h3>
+        </div>
+        <div class="team-back">
+            <p><strong>Ligas:</strong> 0</p>
+            <p><strong>Temporadas:</strong> 19</p>
+            <p><strong>Mejor Clasificación:</strong> 2º</p>
+        </div>
+    </div>
+</div>
+
+<!-- Coviran Granada -->
+<div class="team-card" onclick="flipCard(this)">
+    <div class="team-inner">
+        <div class="team-front">
+            <img src="logos/granada.png" alt="Coviran Granada">
+            <h3>Coviran Granada</h3>
+        </div>
+        <div class="team-back">
+            <p><strong>Ligas:</strong> 0</p>
+            <p><strong>Temporadas:</strong> 3</p>
+            <p><strong>Mejor Clasificación:</strong> 11º</p>
+        </div>
+    </div>
+</div>
+
+<!-- MoraBanc Andorra -->
+<div class="team-card" onclick="flipCard(this)">
+    <div class="team-inner">
+        <div class="team-front">
+            <img src="logos/andorra.png" alt="MoraBanc Andorra">
+            <h3>MoraBanc Andorra</h3>
+        </div>
+        <div class="team-back">
+            <p><strong>Ligas:</strong> 0</p>
+            <p><strong>Temporadas:</strong> 11</p>
+            <p><strong>Mejor Clasificación:</strong> 6º</p>
+        </div>
+    </div>
+</div>
+
+<!-- Leyma Coruña -->
+<div class="team-card" onclick="flipCard(this)">
+    <div class="team-inner">
+        <div class="team-front">
+            <img src="logos/coruna.png" alt="Leyma Coruña">
+            <h3>Leyma Coruña</h3>
+        </div>
+        <div class="team-back">
+            <p><strong>Ligas:</strong> 0</p>
+            <p><strong>Temporadas:</strong> 1</p>
+            <p><strong>Mejor Clasificación:</strong> -</p>
+        </div>
+    </div>
+</div>
+
+<!-- Hiopos Lleida -->
+<div class="team-card" onclick="flipCard(this)">
+    <div class="team-inner">
+        <div class="team-front">
+            <img src="logos/lleida.png" alt="Hiopos Lleida">
+            <h3>Hiopos Lleida</h3>
+        </div>
+        <div class="team-back">
+            <p><strong>Ligas:</strong> 0</p>
+            <p><strong>Temporadas:</strong> 1</p>
+            <p><strong>Mejor Clasificación:</strong> -</p>
+        </div>
+    </div>
+</div>
+
+<!-- Joventut Badalona -->
+<div class="team-card" onclick="flipCard(this)">
+    <div class="team-inner">
+        <div class="team-front">
+            <img src="logos/joventut.png" alt="Joventut Badalona">
+            <h3>Joventut Badalona</h3>
+        </div>
+        <div class="team-back">
+            <p><strong>Ligas:</strong> 4</p>
+            <p><strong>Temporadas:</strong> 68</p>
+            <p><strong>Mejor Clasificación:</strong> 1º</p>
+        </div>
+    </div>
+</div>
+
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Liga Endesa. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        function flipCard(card) {
+            card.classList.toggle("flipped");
+        }
+    </script>
+</body>
+</html>

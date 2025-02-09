@@ -1,0 +1,459 @@
+/* General */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Encabezado */
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navegación */
+nav {
+    background-color: #222;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #E95C20;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    background-color: #E95C20;
+    color: #fff;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+/* Contenido */
+main {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Imagen de la pantalla de inicio */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(233, 92, 32, 0.5);
+    display: block;
+    margin: 20px auto;
+}
+
+/* Secciones */
+section {
+    background-color: #111;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1100px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(233, 92, 32, 0.4);
+}
+
+/* Títulos */
+h1, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #E95C20;
+    font-size: 26px;
+}
+
+/* Línea de Tiempo Restaurada */
+.timeline {
+    margin-top: 50px;
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+}
+
+.timeline h2 {
+    text-align: center;
+    color: #E95C20;
+    font-size: 28px;
+}
+
+.timeline-event {
+    background-color: #222;
+    border-left: 5px solid #E95C20;
+    padding: 15px 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    position: relative;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.timeline-event:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(233, 92, 32, 0.7);
+}
+
+.timeline-event h3 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.timeline-event p {
+    color: #bbb;
+}
+
+.year {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translateY(-50%);
+    background: #E95C20;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Estilo de los jugadores */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.player-card {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(233, 92, 32, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(233, 92, 32, 0.6);
+}
+
+/* Imagen de los jugadores */
+.player-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.player-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Información del jugador */
+.player-card h3 {
+    margin-top: 10px;
+    color: #E95C20;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.player-card p {
+    color: #bbb;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #111;
+    color: #fff;
+    margin-top: 30px;
+}
+.teams-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 900px; /* Ajusta el ancho máximo para evitar que se expanda demasiado */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tarjetas de equipo con efecto flip */
+.team-card {
+    width: 100%;
+    height: 250px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* Estructura interna de la tarjeta */
+.team-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Girar tarjeta al hacer clic */
+.team-card.flipped .team-inner {
+    transform: rotateY(180deg);
+}
+
+/* Parte frontal de la tarjeta */
+.team-front, .team-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(233, 92, 32, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #222;
+}
+
+/* Logo del equipo en la tarjeta */
+.team-front img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Nombre del equipo */
+.team-front h3 {
+    color: #E95C20;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Parte trasera de la tarjeta */
+.team-back {
+    background-color: #111;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.team-back p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #bbb;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #E95C20;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+/* Estilos para la tabla de clasificación */
+#clasificacion {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(233, 92, 32, 0.5);
+}
+
+/* Encabezado de la tabla */
+#clasificacion thead {
+    background-color: #E95C20;
+    color: white;
+    font-size: 22px;
+}
+
+#clasificacion th, #clasificacion td {
+    padding: 15px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Colores alternos para mejorar la lectura */
+#clasificacion tbody tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#clasificacion tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Animación al pasar el cursor sobre una fila */
+#clasificacion tbody tr:hover {
+    background-color: rgba(233, 92, 32, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+/* Estilos especiales para el primer lugar */
+#clasificacion tbody tr:first-child {
+    font-weight: bold;
+    color: #FFD700;
+    background-color: rgba(233, 92, 32, 0.4);
+}
+
+/* Resaltar la posición y el nombre del equipo en primer lugar */
+#clasificacion tbody tr:first-child td {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* Sutil sombreado para las filas */
+#clasificacion tbody tr {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Ajustar tamaños para mejor legibilidad */
+#clasificacion th {
+    font-size: 20px;
+    padding: 15px;
+}
+
+/* Animación cuando se actualicen los datos */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#clasificacion tbody tr {
+    animation: fadeIn 0.5s ease-in-out;
+}
+/* Contenedor de tarjetas */
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Tarjetas de jugadores con efecto flip */
+.player-card {
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* Estructura interna de la tarjeta */
+.player-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Girar tarjeta al hacer clic */
+.player-card.flipped .player-inner {
+    transform: rotateY(180deg);
+}
+
+/* Parte frontal de la tarjeta */
+.player-front, .player-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(233, 92, 32, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #222;
+}
+
+/* Imagen del jugador */
+.player-front img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en la imagen */
+.player-front img:hover {
+    transform: scale(1.1);
+}
+
+/* Parte trasera de la tarjeta */
+.player-back {
+    background-color: #111;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.player-back p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #bbb;
+}
+
