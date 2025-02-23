@@ -58,6 +58,30 @@
                 <p>El Valencia Basket establece nuevos récords de anotación y asistencias, demostrando el alto nivel competitivo de la liga.</p>
             </div>
         </section>
+        <section id="publicidad">
+            <h2>Publicidad Destacada</h2>
+            <div id="producto">
+                <img id="productoImagen" src="" alt="Producto">
+                <h3 id="productoNombre"></h3>
+                <p id="productoPrecio"></p>
+            </div>
+        </section>
+        
+        <script>
+            async function obtenerProducto() {
+                const response = await fetch('https://dummyjson.com/products');
+                const data = await response.json();
+                const productos = data.products;
+                const productoAleatorio = productos[Math.floor(Math.random() * productos.length)];
+        
+                document.getElementById('productoImagen').src = productoAleatorio.thumbnail;
+                document.getElementById('productoNombre').innerText = productoAleatorio.title;
+                document.getElementById('productoPrecio').innerText = `Precio: ${productoAleatorio.price}€`;
+            }
+        
+            obtenerProducto();
+        </script>
+        
     </main>
     <footer>
         <p>&copy; 2025 Liga Endesa. Todos los derechos reservados.</p>
